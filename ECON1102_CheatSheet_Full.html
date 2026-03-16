@@ -35,6 +35,8 @@ body {
   padding: 1.7%;
   container-type: inline-size;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .hdr {
@@ -49,7 +51,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0.78cqi;
-  height: calc(100% - 3.8cqi);
+  flex: 1;
+  min-height: 0;
 }
 .col { overflow: hidden; font-size: 1.06cqi; line-height: 1.28; }
 
