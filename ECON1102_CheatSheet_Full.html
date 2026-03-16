@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECON1102 Cheat Sheet — Side A &amp; B</title>
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #111;
+  background: #d5d5d5;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  padding: 2vh 0;
+}
+
+.page {
+  aspect-ratio: 210 / 297;
+  background: #fff;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06);
+  overflow: hidden;
+  height: min(94vh, 297mm);
+  width: auto;
+  padding: 1.7%;
+  container-type: inline-size;
+  flex-shrink: 0;
+}
+
+.hdr {
+  background: #1a1a2e; color: #fff;
+  padding: 0.3cqi 0.6cqi; margin-bottom: 0.3cqi;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 1.05cqi; font-weight: 700;
+}
+.hdr .sub { font-weight: 400; font-size: 0.75cqi; }
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.6cqi;
+  height: calc(100% - 2.8cqi);
+}
+.col { overflow: hidden; font-size: 0.74cqi; line-height: 1.28; }
+
+.sec {
+  background: #1a7a1a; color: #fff;
+  font-size: 0.82cqi; font-weight: 700;
+  padding: 0.15cqi 0.5cqi; margin: 0.25cqi 0 0.2cqi;
+}
+.b { font-weight: 700; font-size: 0.76cqi; margin-top: 0.08cqi; }
+.t { font-size: 0.76cqi; line-height: 1.25; }
+.sm { font-size: 0.7cqi; color: #333; line-height: 1.22; }
+.dm { font-size: 0.7cqi; color: #555; line-height: 1.22; }
+.bl { font-size: 0.7cqi; color: #333; line-height: 1.22; padding-left: 0.1cqi; }
+.bl::before { content: "– "; }
+.grn { color: #1a7a1a; }
+.orn { color: #b35900; }
+
+.fb {
+  background: #edf7ed; border-left: 0.2cqi solid #1a7a1a;
+  padding: 0.35cqi 0.45cqi; margin: 0.2cqi 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.78cqi; line-height: 1.3; white-space: pre;
+}
+.fb .lab {
+  font-family: Helvetica, sans-serif; font-size: 0.62cqi; font-weight: 700;
+  color: #1a7a1a; text-transform: uppercase; margin-bottom: 0.2cqi; display: block;
+}
+.fb .nt {
+  font-family: Helvetica, sans-serif; font-size: 0.62cqi; color: #555;
+  margin-top: 0.1cqi; white-space: normal; line-height: 1.2;
+}
+
+.eb {
+  background: #e8f0fa; border-left: 0.2cqi solid #0d4f8b;
+  padding: 0.35cqi 0.45cqi; margin: 0.2cqi 0;
+  font-size: 0.76cqi; line-height: 1.25;
+}
+.eb .lab { font-size: 0.62cqi; font-weight: 700; color: #0d4f8b; text-transform: uppercase; margin-bottom: 0.2cqi; display: block; }
+
+.wb {
+  background: #fff3e6; border-left: 0.2cqi solid #b35900;
+  padding: 0.35cqi 0.45cqi; margin: 0.2cqi 0;
+  font-size: 0.76cqi; line-height: 1.25;
+}
+.wb .lab { font-size: 0.62cqi; font-weight: 700; color: #b35900; text-transform: uppercase; margin-bottom: 0.2cqi; display: block; }
+
+@media print {
+  html, body { background: #fff; }
+  body { gap: 0; padding: 0; }
+  .page { width: 210mm; height: 297mm; box-shadow: none; aspect-ratio: auto; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SIDE A — Weeks 1-2                                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="page">
+<div class="hdr"><span>ECON1102 MACROECONOMICS 1 — COMPLETE REFERENCE</span><span class="sub">SIDE A | Weeks 1-2</span></div>
+<div class="cols">
+
+<!-- ── A-C1: GDP ── -->
+<div class="col">
+<div class="sec">GDP: DEFINITION &amp; MEASUREMENT</div>
+<div class="b">GDP = monetary value of FINAL goods &amp; services</div>
+<div class="t">produced in a country during a given period.</div>
+<div class="sm">Monetary ($), final only (no intermediates = double counting), produced (not bought), flow (quarterly).</div>
+<div class="b">EXCLUDED:</div>
+<div class="bl">Financial txns (transfers, share sales)</div>
+<div class="bl">2nd-hand goods (no new production)</div>
+<div class="bl">Unpaid housework (no market price)</div>
+<div class="b">INCLUDED (unpriced):</div>
+<div class="bl">Govt services: valued at COST of provision</div>
+<div class="bl">Owner-occ rent: IMPUTED by ABS from census data</div>
+<div class="fb"><span class="lab">3 Methods + GNI</span>EXPENDITURE: Y = C+I+G+X-M
+INCOME: GDP = WL+RK+Net Indirect Tax
+PRODUCTION: sum of Value Added
+  VA = Sales - Cost of Intermediates
+GNI = GDP + Net Primary Income<div class="nt">C=consump I=invest G=govt X=exp M=imp<br>GDP=location; GNI=nationality of income<br>Sum VA across all firms = GDP (no double count)</div></div>
+<div class="dm">Y+M = C+I+G+X: supply of G&amp;S = demand for G&amp;S</div>
+<div class="sec">NOMINAL vs REAL GDP</div>
+<div class="sm">Nominal: current-yr prices (inc inflation effect).</div>
+<div class="sm">Real: base-yr prices (volume only). Real = what affects living standards (quantity not price).</div>
+<div class="fb"><span class="lab">Core Relationships</span>Nom GDP = Price Level x Real GDP
+Real GDP = Nom GDP / Price Level
+Price Lvl = Nom GDP / Real GDP
+GDP Deflator = Nom GDP / Real GDP
+
+%dNom ~ %dPrices + %dReal
+Real GDP p.c. = Real GDP / Pop
+%dReal p.c. ~ %dReal GDP - %dPop</div>
+<div class="b">Chain-weighting:</div>
+<div class="sm">Calc growth using BOTH Laspeyres (initial prices) AND Paasche (final prices), then AVERAGE them.</div>
+<div class="dm">Apply year-by-year for long series. Avoids bias from choice of base year over long periods.</div>
+<div class="eb"><span class="lab">Chain Example</span>Lasp=4.5%, Paasche=5.6%<br>Chain=(4.5+5.6)/2 = 5.05%<br>If base yr 2007, Real GDP 2007=201,000:<br>Real GDP 2008 = 201,000 x 1.0505 = 211,151</div>
+<div class="b">Business Cycles:</div>
+<div class="sm">Recession: &gt;=2 consec qtrs neg real GDP growth.</div>
+<div class="sm">Peak=high before contraction. Trough=low before recovery. Expansion=GDP rising.</div>
+<div class="dm">Aus last recession: H1 2020 (COVID). Before that: early 1990s.</div>
+<div class="b">GDP as welfare - limitations:</div>
+<div class="bl">Omits leisure, household prod, environment</div>
+<div class="bl">Quality of life, happiness, inequality</div>
+<div class="bl">Pos correlation (medical care) but not always</div>
+<div class="bl">(inequality worsened). Alternatives: happiness</div>
+<div class="dm">surveys, wellbeing indexes, HDI.</div>
+<div class="sec">CPI, DEFLATOR &amp; INFLATION</div>
+<div class="fb"><span class="lab">Price Formulas</span>CPI(t)=[Cost basket(t)/Cost basket(base)]x100
+pi(t)=[CPI(t)-CPI(t-1)]/CPI(t-1) x 100
+GDP Deflator = Nom GDP / Real GDP</div>
+<div class="eb"><span class="lab">CPI Worked Examples</span>Base=$680, Now=$850. CPI=850/680=1.25<br>pi=(1.25-1)/1 x100 = 25%<br>If CPI yr1=105, yr2=108:<br>pi=(108-105)/105 x100 = 2.86%</div>
+<div class="sm">pi&gt;0:inflation. pi&lt;0:deflation. pi falling&gt;0:DISinflation</div>
+<div class="dm">Aus CPI: published qtrly by ABS. Weights updated annually (was every 5yrs before end-2017).</div>
+<div class="dm">CPI vs Deflator: CPI uses FIXED basket; deflator uses current production weights. CPI measures cost of living; deflator measures price of all GDP.</div>
+</div>
+
+<!-- ── A-C2: Inflation + Labour ── -->
+<div class="col">
+<div class="sec">INFLATION: BIASES &amp; COSTS</div>
+<div class="b">CPI biases (all OVERSTATE true inflation):</div>
+<div class="bl">Quality: improvements look like price rises</div>
+<div class="bl">New goods: excluded from basket until rebase</div>
+<div class="bl">Substitution: fixed basket ignores consumers</div>
+<div class="dm">&nbsp;&nbsp;switching to cheaper alternatives.</div>
+<div class="b">Costs of UNEXPECTED inflation:</div>
+<div class="bl">Redistributes: borrowers gain, lenders lose</div>
+<div class="bl">Hurts fixed nominal income earners</div>
+<div class="bl">Distorts tax system (if not indexed)</div>
+<div class="bl">Noise in relative price signals (can't tell</div>
+<div class="dm">&nbsp;&nbsp;individual price change vs general level).</div>
+<div class="b">Costs of ANTICIPATED inflation:</div>
+<div class="bl">Shoe-leather: frequent bank trips (money</div>
+<div class="dm">&nbsp;&nbsp;loses purchasing power over time).</div>
+<div class="bl">Menu costs: real resources spent changing prices.</div>
+<div class="b grn">Optimal inflation: 1-3% p.a.</div>
+<div class="bl">Avoids deflation (discourages spending/invest)</div>
+<div class="bl">Allows moderate falls in real wages (stim LD)</div>
+<div class="bl">Promotes demand for goods &amp; services</div>
+<div class="bl">Most countries have explicit inflation targets.</div>
+<div class="sec">LABOUR MARKET DEFINITIONS</div>
+<div class="sm">Employed: &gt;=1hr work/wk for pay (or on leave).</div>
+<div class="sm">During COVID: attached to employer (on JobKeeper).</div>
+<div class="sm">Unemployed: not working + actively looked in past month + available to start (or waiting on new job).</div>
+<div class="sm">Labour Force: LF = L + U.</div>
+<div class="sm">Pop = working-age (15+, civilian, usually resident).</div>
+<div class="dm">NOT in LF: homeworkers, volunteers, disabled, voluntarily inactive, DISCOURAGED workers.</div>
+<div class="fb"><span class="lab">Key Ratios</span>u = (U/LF) x 100       [unemp rate]
+PR = (LF/Pop) x 100    [participation]
+E/P = (L/Pop) x 100    [emp-to-pop]</div>
+<div class="sm">Underemployment: wants more hrs or overqualified.</div>
+<div class="dm">Discouraged: given up search despite wanting work, believe no suitable jobs avail. Counted as NLF.</div>
+<div class="dm">Full-time: &gt;=35hrs/wk. Casual: no paid leave.</div>
+<div class="sec">TYPES OF UNEMPLOYMENT</div>
+<div class="b grn">FRICTIONAL (short-term):</div>
+<div class="sm">Job search between positions. Normal &amp; BENEFICIAL (better worker-job matching). Any dynamic economy.</div>
+<div class="b grn">STRUCTURAL (long-term):</div>
+<div class="sm">Skills mismatch. Causes: automation, offshoring, structural change, lack of skills, discrimination.</div>
+<div class="b grn">CYCLICAL (variable):</div>
+<div class="sm">Business cycle. Rises recessions, falls booms.</div>
+<div class="fb"><span class="lab">Natural Rate</span>dU = s*L - f*U
+Steady state (dU=0):
+  u(fric) = s/(s+f) x 100
+u* = u(fric)+u(struct) [natural rate]
+Cyclical unemp = u - u*
+u*>0 always (even at 'full employment')<div class="nt">s=separation rate, f=job-finding rate<br>Policies can influence s (employment services)<br>or f (training programs, job matching)</div></div>
+<div class="eb"><span class="lab">Frictional Unemp Example</span>If s=0.02, f=0.18:<br>u(fric)=0.02/(0.02+0.18)x100 = 10%<br>If s=0.01, f=0.19:<br>u(fric)=0.01/0.20 x100 = 5%<br>Lower s or higher f -&gt; lower u(fric).</div>
+</div>
+
+<!-- ── A-C3: Okun + Labour Model ── -->
+<div class="col">
+<div class="sec">OUTPUT GAPS &amp; OKUN'S LAW</div>
+<div class="b">Y* = potential output:</div>
+<div class="sm">GDP when L and K at NORMAL utilisation rates. NOT maximum. Grows over time with labour force, capital stock, technology.</div>
+<div class="dm">Y not always = Y*.</div>
+<div class="fb"><span class="lab">Output Gap</span>Output Gap = Y - Y*
+Output Gap(%) = (Y-Y*)/Y* x 100
+
+POSITIVE (Y>Y*): EXPANSIONARY
+  Firms above normal capacity
+  -> raise prices -> INFLATIONARY
+NEGATIVE (Y<Y*): CONTRACTIONARY
+  L+K underutilised, forgone output
+  -> high unemployment
+Both gaps are problems for policymakers.</div>
+<div class="fb"><span class="lab">Okun's Law</span>OKUN'S LAW:
+(Y-Y*)/Y* x 100 = -B(u - u*)
+B ~ 2 for Australia (RBA: ~1.25)
+1pp rise cyclical unemp -> B% fall in gap
+Negative sign: u up -> gap down (inverse)</div>
+<div class="eb"><span class="lab">Okun Worked Examples</span>Ex1: u:5%-&gt;7%, u*=5%, B=2<br>&nbsp;&nbsp;Cyclical=2pp. Gap=-2x2=-4% [below Y*]<br>Ex2: u:4%-&gt;3%, u*=4%, B=2<br>&nbsp;&nbsp;Cyclical=-1pp. Gap=-2x(-1)=+2% [above Y*]<br>&nbsp;&nbsp;Second case: INFLATIONARY pressure.<br>Ex3: u=u*=5%: Gap=-2x(5-5)=0% [at potential]</div>
+<div class="sec">LABOUR DEMAND &amp; SUPPLY</div>
+<div class="sm">MPL = extra output from 1 more worker (K fixed). DIMINISHING returns. VMPL = p x MPL.</div>
+<div class="fb"><span class="lab">Labour Demand &amp; Supply</span>Firm: VMPL = p x MPL = W   [nominal]
+Equiv: MPL = W/P           [real wage]
+Hire workers until VMPL = wage.
+If MPL > W/P: hire more (profitable).
+If MPL < W/P: too many, lay off.
+
+LD shifts R: higher p or higher MPL
+LS shifts R: higher Pop or higher PR
+LS = increasing fn of real wage (W/P)</div>
+<div class="b grn">Higher productivity effect:</div>
+<div class="sm">LD shifts right -&gt; move along LS -&gt; BOTH real wage AND employment increase.</div>
+<div class="b">Frictions -&gt; involuntary unemployment:</div>
+<div class="bl">Min wage above equil: Ls&gt;Ld=unemployment</div>
+<div class="dm">&nbsp;&nbsp;Those employed (Ld) better off at higher W.</div>
+<div class="dm">&nbsp;&nbsp;Gap Ls-Ld = people who WANT work but can't.</div>
+<div class="bl">Unions: collective bargain -&gt; W above clearing</div>
+<div class="bl">Taxes: wedge between firm cost &amp; take-home</div>
+<div class="dm">Competitive model: no frictions = no involuntary unemp. Flexible W/P clears market always.</div>
+<div class="eb"><span class="lab">Labour Demand Numerical Example</span>Firm: P=2, MPL schedule: L=1-&gt;MPL=10,<br>L=2-&gt;8, L=3-&gt;6, L=4-&gt;4, L=5-&gt;2.<br>W=$10/hr. W/P=10/2=5.<br>Hire until MPL&gt;=W/P=5: hire 3 workers<br>(MPL=6&gt;5). NOT 4th (MPL=4&lt;5).</div>
+</div>
+
+<!-- ── A-C4: Interest + Investment + Saving ── -->
+<div class="col">
+<div class="sec">INTEREST RATES</div>
+<div class="sm">Nominal i: return in MONEY terms.</div>
+<div class="sm">Real r: return in GOODS (adjusted for inflation).</div>
+<div class="dm">EXPECTED real rate matters for decisions.</div>
+<div class="fb"><span class="lab">Fisher Equation</span>r = i - pi        [ex-post, actual]
+r = i - pi(e)     [ex-ante, expected]
+FISHER EFFECT: i = r + pi(e)
+  Nominal rate moves 1-for-1 with
+  expected inflation (r constant)</div>
+<div class="eb"><span class="lab">Fisher Effect Examples</span>Want real return 5%:<br>&nbsp;&nbsp;pi(e)=3%: i=5+3=8%<br>&nbsp;&nbsp;pi(e)=1%: i=5+1=6%<br>&nbsp;&nbsp;pi(e)=5%: i=5+5=10%<br>&nbsp;&nbsp;pi(e)=-6%: i=5-6=-1% (problem!)<br>&nbsp;&nbsp;Lose nominal money. Better: don't lend.<br>&nbsp;&nbsp;-&gt; ZLB: i&gt;=0 historically.<br>&nbsp;&nbsp;If i=0: r=-pi(e).<br>Japan/Europe: negative i observed.</div>
+<div class="sec">INVESTMENT &amp; USER COST OF CAPITAL</div>
+<div class="sm">Investment = purchase of NEW capital goods (business equip, structures, dwellings, inventories).</div>
+<div class="dm">I=flow; K(capital stock)=stock. Types: public, private (business, dwelling), inventory.</div>
+<div class="fb"><span class="lab">Capital &amp; User Cost</span>K(1) = K(0) + I(1) - d*K(0)  [accum]
+  d = depreciation rate
+
+UC = P(K) x [r + d]    [user cost]
+  P(K)=capital price
+  r=real interest rate, d=depreciation
+
+INVEST if VMPK >= UC
+r up -> UC up -> fewer worthwhile
+  projects -> I DOWN (negative rel)
+Even retained earnings: opp cost = i<div class="nt">Derived: interest + depreciation - cap gain<br>Cap gain assumed = general inflation rate</div></div>
+<div class="eb"><span class="lab">User Cost Example</span>P(K)=$1M, r=5%, d=10%:<br>UC = 1M x (0.05+0.10) = $150,000/yr<br>If r rises to 8%:<br>UC = 1M x (0.08+0.10) = $180,000/yr<br>Higher UC -&gt; fewer projects worthwhile.</div>
+<div class="sec">SAVING &amp; NATIONAL SAVING</div>
+<div class="fb"><span class="lab">Saving Identities</span>Y(D)=Y-TA+TR+INT-RE [disposable inc]
+S=Y(D)-C [household saving]
+dW=S+Net Capital Gains [wealth change]
+
+NS=Y-C-G [national saving]
+Closed econ: NS=I
+NS=(Y-T-RE-C)+RE+(T-G)
+   [Household] [Bus] [Govt]
+BB=T-G (surplus>0, deficit<0)
+
+Public saving = T-G = BB
+Private saving = household + business<div class="nt">TA=tax, TR=transfers, INT=govt interest<br>RE=retained earnings</div></div>
+<div class="dm">Saving motives: life-cycle (retirement), precautionary (insure vs shocks), bequest.</div>
+<div class="dm">Higher r -&gt; C today relatively expensive -&gt; incentive to save more (sub effect).</div>
+<div class="dm">Consumption smoothing: spread income over life.</div>
+<div class="wb"><span class="lab">Key Concept</span>CROWDING OUT: Govt deficit up -&gt; NS down<br>-&gt; saving curve LEFT -&gt; r RISES<br>-&gt; private I FALLS. Deficit 'crowds out'<br>private invest by raising borrowing cost.<br>In closed econ: NS=I, so if NS down<br>then I must fall. Higher r is mechanism.</div>
+</div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SIDE B — Weeks 3-4                                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="page">
+<div class="hdr"><span>ECON1102 MACROECONOMICS 1 — COMPLETE REFERENCE</span><span class="sub">SIDE B | Weeks 3-4</span></div>
+<div class="cols">
+
+<!-- ── B-C1: Keynesian + Consumption ── -->
+<div class="col">
+<div class="sec">WK3: KEYNESIAN FRAMEWORK</div>
+<div class="b grn">KEY: Prices STICKY in short run.</div>
+<div class="sm">Firms vary PRODUCTION to meet demand (not prices).</div>
+<div class="sm">SR: demand falls -&gt; output+employment fall (not P).</div>
+<div class="sm">SR: demand rises -&gt; output+employment rise (not P).</div>
+<div class="dm">LR: sustained demand changes -&gt; price adjustment.</div>
+<div class="dm">Micro: firms have market power + menu costs (real cost of changing prices). Not perfectly competitive.</div>
+<div class="dm">Contrast: frictionless view = flexible P&amp;W absorb demand shocks, no output/employment change.</div>
+<div class="fb"><span class="lab">PAE &amp; Equilibrium</span>PAE = C + I(P) + G + X - M
+  I(P)=planned investment
+Actual: Y = C+I+G+X-M
+  I = I(P) + dInv(unplanned)
+
+EQUILIBRIUM: Y = PAE
+  <=> I=I(P) <=> dInv(unpl)=0
+
+Y = PAE + unplanned inventory change</div>
+<div class="b">Disequilibrium adjustment:</div>
+<div class="bl">Y&gt;PAE: inventories pile up (goods producers)</div>
+<div class="dm">&nbsp;&nbsp;or excess capacity (service). CUT output -&gt; Y dn.</div>
+<div class="bl">Y&lt;PAE: inventories deplete (goods) or</div>
+<div class="dm">&nbsp;&nbsp;insufficient capacity (service). RAISE output -&gt; Y up.</div>
+<div class="dm">Continues until Y=PAE at equilibrium.</div>
+<div class="sec">CONSUMPTION FUNCTION</div>
+<div class="fb"><span class="lab">Keynesian Consumption</span>C = C(0) + c(Y - T)
+C(0) = autonomous consumption
+  (wealth, confidence, interest rates;
+   determined OUTSIDE model)
+c = MPC (0 < c < 1)
+  $1 rise (Y-T) -> $c rise in C
+  (less than $1; rest is SAVED)
+
+MPC = dC/d(Y-T) = c
+APC = C/(Y-T) = C(0)/(Y-T) + c
+  APC > MPC; APC -> MPC as Y rises
+  (C(0)/(Y-T) shrinks toward 0)</div>
+<div class="fb"><span class="lab">Saving Function (Derived)</span>S = Y-C = -C(0) + (1-c)Y  [saving fn]
+MPS = 1-c     MPC+MPS = 1
+c=0.75: MPS=0.25
+  $1 extra: 75c spent, 25c saved</div>
+<div class="dm">45-deg line: y=x (slope=1). All Y=PAE points.</div>
+<div class="dm">Equil: PAE line (slope=c&lt;1) crosses 45-deg line.</div>
+<div class="dm">Slope &lt; 1 guarantees unique crossing = unique equil.</div>
+<div class="dm">C(0) shifts PAE line UP/DOWN (parallel shift).</div>
+<div class="dm">c changes SLOPE of PAE line.</div>
+<div class="eb"><span class="lab">Numerical Equilibrium Example</span>C(0)=100, c=0.8, T=0, I(0)=50:<br>C = 100+0.8Y. PAE = 150+0.8Y.<br>Y=PAE: Y=150+0.8Y -&gt; 0.2Y=150<br>Y(e)=750. Check: PAE=150+0.8(750)=750.</div>
+</div>
+
+<!-- ── B-C2: Multiplier + Open Economy ── -->
+<div class="col">
+<div class="sec">2-SECTOR MODEL &amp; MULTIPLIER</div>
+<div class="sm">No govt (G=T=0), closed economy (X=M=0).</div>
+<div class="fb"><span class="lab">Full Derivation</span>PAE = C(0) + cY + I(0)
+Set Y=PAE:
+  Y = C(0)+cY+I(0)
+  Y-cY = C(0)+I(0)
+  Y(1-c) = C(0)+I(0)
+
+  Y(e) = [1/(1-c)] x (C(0)+I(0))
+
+MULTIPLIER = 1/(1-c) > 1
+dY/dC(0) = dY/dI(0) = 1/(1-c)</div>
+<div class="eb"><span class="lab">Multiplier Table</span>c=0.75: M=1/0.25=4. &nbsp;$100-&gt;dY=$400<br>c=0.80: M=1/0.20=5. &nbsp;$100-&gt;dY=$500<br>c=0.50: M=1/0.50=2. &nbsp;$100-&gt;dY=$200<br>c=0.90: M=1/0.10=10. $50-&gt;dY=$500</div>
+<div class="b">Round-by-round process:</div>
+<div class="sm">dPAE=100 -&gt; $100 income -&gt; spend c*100 -&gt; new income c*100 -&gt; spend c^2*100 -&gt; ... converges.</div>
+<div class="dm">Total: 100x[1+c+c^2+...] = 100/(1-c).</div>
+<div class="dm">Works because 0&lt;c&lt;1 so geometric series converges.</div>
+<div class="eb"><span class="lab">Round-by-Round Example</span>c=0.8, dI(0)=100. Rounds:<br>R1: dY=100, R2: dY=80, R3: dY=64,<br>R4: dY=51.2, R5: dY=41.0, ...<br>Total: 100/0.2 = 500.</div>
+<div class="sec">OPEN ECONOMY (NO GOVT)</div>
+<div class="fb"><span class="lab">Open Economy</span>C=C(0)+cY, I(P)=I(0), X=X(0), M=mY
+m=marginal propensity to import
+  (fraction $1 GDP spent on imports)
+
+PAE=[C(0)+I(0)+X(0)]+(c-m)Y
+     [autonomous]     [induced]
+
+Y(e)=[1/(1-(c-m))]x(C(0)+I(0)+X(0))
+OPEN MULT = 1/[1-(c-m)]
+Slope of PAE = (c-m) < c</div>
+<div class="wb"><span class="lab">Why Imports Reduce Multiplier</span>OPEN &lt; CLOSED MULT (since m&gt;0):<br>1/[1-(c-m)] &lt; 1/(1-c)<br>Imports=LEAKAGE: each spending round,<br>part flows overseas not domestic income.<br>Bigger m -&gt; bigger leakage -&gt; smaller mult.</div>
+<div class="eb"><span class="lab">Open vs Closed Examples</span>c=0.8,m=0.2: open=1/0.4=2.5 vs closed=5<br>c=0.8,m=0.3: open=1/0.5=2.0<br>c=0.6,m=0.1: open=1/0.5=2.0<br>c=0.6,m=0.2: open=1/0.6=1.67</div>
+<div class="b orn">PARADOX OF THRIFT:</div>
+<div class="sm">All HH save more (C(0) falls) -&gt; Y(e) falls but equil saving UNCHANGED (=I(P) in 2-sector).</div>
+<div class="dm">Why: S(e)=-C(0)+(1-c)Y(e). C(0) dn, Y(e) dn too -&gt; S stays = I(P). FALLACY OF COMPOSITION: rational for 1 =/= good for all.</div>
+<div class="sec">OUTPUT GAPS IN I-E MODEL</div>
+<div class="sm">If Y(e)=Y* initially, exogenous fall in C(0) or I(0) -&gt; Y(e) falls below Y* -&gt; CONTRACTIONARY GAP.</div>
+<div class="dm">Investment more cyclical than consumption.</div>
+<div class="dm">Govt can use fiscal policy to close the gap.</div>
+</div>
+
+<!-- ── B-C3: Fiscal Policy ── -->
+<div class="col">
+<div class="sec">WK4: FISCAL INSTRUMENTS</div>
+<div class="sm">G: DIRECT on PAE (component of spending).</div>
+<div class="sm">T(0),TR: INDIRECT via C=C(0)+c(Y-T).</div>
+<div class="sm">t: marginal tax rate in T=T(0)+tY.</div>
+<div class="dm">$1 rise Y -&gt; $t rise tax rev. 0&lt;t&lt;1.</div>
+<div class="sec">3-SECTOR MODEL (CLOSED+GOVT)</div>
+<div class="fb"><span class="lab">3-Sector Derivation (Step by Step)</span>C=C(0)+c(Y-T), T=T(0)+tY
+I(P)=I(0), G=G(0)
+Sub T into C:
+  C=C(0)+c(Y-T(0)-tY)
+  C=C(0)+cY-cT(0)-ctY
+  C=C(0)-cT(0)+c(1-t)Y
+
+PAE=[C(0)-cT(0)+I(0)+G(0)]+c(1-t)Y
+    [exogenous]            [endogen]</div>
+<div class="fb"><span class="lab">Equilibrium &amp; Fiscal Multipliers</span>Y(e) = [1/(1-c(1-t))] x
+       [C(0)-cT(0)+I(0)+G(0)]
+
+G MULT = 1/[1-c(1-t)]       (>1)
+T MULT = -c/[1-c(1-t)]      (<0)
+  |T mult| < |G mult| ALWAYS
+
+In changes:
+dY=[1/(1-c(1-t))]x
+   [dC(0)-c*dT(0)+dI(0)+dG(0)]</div>
+<div class="eb"><span class="lab">Fiscal Multiplier Calculation</span>c=0.6, t=0.3:<br>1-c(1-t)=1-0.6(0.7)=1-0.42=0.58<br>G mult=1/0.58=1.72<br>T mult=-0.6/0.58=-1.03<br><br>+$100 G -&gt; dY=+$172<br>-$100 T(0) -&gt; dY=+$103<br>G has LARGER effect on GDP.</div>
+<div class="b grn">WHY G MULT &gt; T MULT:</div>
+<div class="bl">G enters PAE DIRECTLY ($1 for $1)</div>
+<div class="bl">Tax cut raises Y(D), but only c is spent</div>
+<div class="dm">&nbsp;&nbsp;(rest saved). Enters PAE at $c &lt; $1.</div>
+<div class="dm">c small (~0.1): G mult~1, T mult~0 (all saved).</div>
+<div class="dm">c=1: G=T mult=1/t (all income spent, equal).</div>
+<div class="dm">IMF: G mult 0.5-0.9, T mult 0.1-0.3.</div>
+<div class="dm">RBA/OECD: G mult 1.1-1.3 for Australia.</div>
+<div class="sec">BALANCED BUDGET MULTIPLIER</div>
+<div class="sm">Raise G(0) and T(0) by SAME amount.</div>
+<div class="sm">Initial BB unchanged: (T+100)-(G+100)=T-G.</div>
+<div class="fb"><span class="lab">BBM Derivation</span>Set dG(0)=dT(0), dC(0)=dI(0)=0:
+dY=[1/(1-c(1-t))] x [-c*dG(0)+dG(0)]
+  =[1/(1-c(1-t))] x (1-c) x dG(0)
+
+BBM = (1-c)/[1-c(1-t)]
+  POSITIVE but LESS THAN 1</div>
+<div class="eb"><span class="lab">BBM Worked Example</span>c=0.6,t=0.3: BBM=0.4/0.58=0.69<br>$100 balanced-budget -&gt; dY=$69<br><br>Intuition: +$100G fully enters PAE.<br>But +$100T reduces C by c*100=$60 only<br>(HH save $40). Net on PAE = +$40.<br>Amplified by mult: 0.4 x 1.72 = 0.69.</div>
+</div>
+
+<!-- ── B-C4: Stabilisers + Debt ── -->
+<div class="col">
+<div class="sec">AUTOMATIC STABILISERS</div>
+<div class="sm">T=T(0)+tY auto-dampens GDP fluctuations:</div>
+<div class="bl">GDP dn -&gt; tax rev dn, transfers (eg unemp</div>
+<div class="dm">&nbsp;&nbsp;benefits) rise -&gt; Y(D) cushioned -&gt; smaller C fall.</div>
+<div class="bl">GDP up -&gt; tax rev up, transfers fall</div>
+<div class="dm">&nbsp;&nbsp;-&gt; restrains overheating.</div>
+<div class="dm">NO govt action. BB auto-moves to deficit in recessions, surplus in booms.</div>
+<div class="dm">Also: t&gt;0 makes multiplier SMALLER than t=0: 1/[1-c(1-t)] &lt; 1/(1-c). Tax auto-leaks each round of spending, reducing amplification of shocks.</div>
+<div class="sec">DISCRETIONARY FISCAL POLICY</div>
+<div class="sm">Deliberate changes in G, T(0), TR, or t.</div>
+<div class="b">TIME LAGS (why fiscal &lt; monetary):</div>
+<div class="bl">Recognition: data lags to detect state of econ</div>
+<div class="bl">Decision: choose appropriate policy response</div>
+<div class="bl">Implementation: needs legislation/parliament</div>
+<div class="bl">Effect: time for policy to influence economy</div>
+<div class="dm">Policy should be FORWARD-LOOKING (forecasts).</div>
+<div class="dm">Prior to GFC, fiscal seen as less important than monetary. GFC/COVID revived fiscal activism.</div>
+<div class="b grn">To close NEGATIVE gap (Y&lt;Y*):</div>
+<div class="bl">Increase G -&gt; PAE up -&gt; Y(e) rises toward Y*</div>
+<div class="bl">Decrease T(0) -&gt; Y(D) up -&gt; C up -&gt; PAE up</div>
+<div class="b grn">To close POSITIVE gap (Y&gt;Y*):</div>
+<div class="bl">Decrease G or Increase T(0).</div>
+<div class="sec">PUBLIC DEBT &amp; SUSTAINABILITY</div>
+<div class="fb"><span class="lab">Debt Formulas</span>BB=T-G. D(t)=D(t-1)-BB(t)
+Deficit(BB<0)->debt up. Surplus->debt dn.
+
+BUDGET CONSTRAINT:
+G(t)+TR(t)+r*D(t-1)=TA(t)+[D(t)-D(t-1)]
+[uses of funds]     [sources of funds]
+r*D(t-1)=interest on outstanding debt
+D(t)-D(t-1)=new borrowing
+
+DEBT-TO-GDP DYNAMICS:
+dd(t)=[(r-g)/(1+g)]*d(t-1) - pbb(t)
+d=D/Y, g=real GDP growth
+pbb=PBB/Y, PBB=TA-G-TR (excl interest)
+3 sources: taxes, borrowing, money.</div>
+<div class="b">d INCREASES when:</div>
+<div class="bl">Primary budget deficits (pbb&lt;0)</div>
+<div class="bl">r&gt;g (interest exceeds GDP growth)</div>
+<div class="b grn">Fiscal rules:</div>
+<div class="bl">Balance budget over business cycle (deficit</div>
+<div class="dm">&nbsp;&nbsp;in recession, surplus in expansion).</div>
+<div class="bl">Golden rule: current exp from taxes; capital</div>
+<div class="dm">&nbsp;&nbsp;invest from borrowing (pay-as-you-use; future generations benefit &amp; share cost via taxes).</div>
+<div class="b">Costs of high debt:</div>
+<div class="bl">Lower growth (empirical evidence)</div>
+<div class="bl">Crowding out (deficit-&gt;r up-&gt;private I dn</div>
+<div class="dm">&nbsp;&nbsp;-&gt;lower K-&gt;lower LR growth).</div>
+<div class="bl">Intergenerational inequity (current gen</div>
+<div class="dm">&nbsp;&nbsp;benefits, future bears tax burden).</div>
+<div class="bl">Money financing -&gt; hyperinflation (pi&gt;50%/mo)</div>
+<div class="dm">&nbsp;&nbsp;Avoided by modern advanced economies.</div>
+<div class="dm">&nbsp;&nbsp;Zimbabwe 2000s, Venezuela = examples.</div>
+<div class="dm">Aus: d currently stable; (r-g)~0, pbb~0.</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
